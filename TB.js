@@ -57,7 +57,7 @@
       curates: 0
     };
 
-    settings.prototype.pupScriptUrl = 'https://dl.dropbox.com/u/21023321/TastycatBot.js';
+    settings.prototype.pupScriptUrl = 'https://raw.github.com/superimpega/TastybotTest/master/TB.js';
 
     settings.prototype.afkTime = 60 * 60 * 1000;
 
