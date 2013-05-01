@@ -367,8 +367,8 @@
 
     me = API.getSelf();
     myname = me.username;
-    currentversion = "1.1.0";
-    log("TastycatBOT version " + currentversion + " started");
+    currentversion = "1.0";
+    log("TastycatBOT SuperEdit " + currentversion + " started");
     return API.sendChat("Have no fear, " + myname + " is here!");
   };
 
@@ -415,7 +415,7 @@
           secsLastActive = timeSinceLastActivity / 1000;
           if (user.getWarningCount() === 0) {
             user.warn();
-            _results.push(API.sendChat("@" + user.getUser().username + ", I haven't seen you chat in 1 hour. Are you AFK?  If you don't show activity in 4 minutes I will remove you from the booth."));
+            _results.push(API.sendChat("@" + user.getUser().username + ", I haven't seen you chat in about 1 hour. Are you AFK?  If you don't show activity in 4 minutes I will remove you from the booth."));
           } else if (user.getWarningCount() === 1) {
             lastWarned = user.getLastWarning();
             timeSinceLastWarning = now.getTime() - lastWarned.getTime();
@@ -423,7 +423,7 @@
             if (timeSinceLastWarning > twoMinutes) {
               DJs = API.getDJs();
               if (DJs.length > 0 && DJs[0].id !== user.getUser().id) {
-                API.sendChat("@" + user.getUser().username + ", you had 1 warning. Please stay active by chatting.");
+                API.sendChat("@" + user.getUser().username + ", I Have given you 1 warning. Please stay active by chatting.");
                 API.moderateRemoveDJ(id);
                 _results.push(user.warn());
               } else {
@@ -607,7 +607,7 @@
     newsCommand.prototype.functionality = function() {
       var msg;
 
-      msg = "No news at this moment in time. ";
+      msg = "Super Has programmed no news at this moment. ";
       return API.sendChat(msg);
     };
 
@@ -798,9 +798,9 @@
         }
       }
       if (msg === '') {
-        return API.sendChat("No one is AFK");
+        return API.sendChat("Nobody seems to be AFK! Full House!");
       } else {
-        return API.sendChat('AFKs: ' + msg);
+        return API.sendChat('Current AFKs: ' + msg);
       }
     };
 
@@ -839,7 +839,7 @@
         }
       }
       if (msg === '') {
-        return API.sendChat("No one is AFK");
+        return API.sendChat("Nobody appears to be AFK!");
       } else {
         return API.sendChat('AFKs: ' + msg);
       }
@@ -876,7 +876,7 @@
       t = data.totalVotingData;
       t['songs'] = data.songCount;
       launch = 'Initiated ' + month + '/' + day + ' ' + hour + ':' + min + ' ' + meridian + '. ';
-      totals = '' + t.songs + ' songs have been played, accumulating ' + t.woots + ' woots, ' + t.mehs + ' mehs, and ' + t.curates + ' queues.';
+      totals = '' + t.songs + ' songs have been dropped, Making ' + t.woots + ' woots, ' + t.mehs + ' mehs, and ' + t.curates + ' queues.';
       msg = launch + totals;
       return API.sendChat(msg);
     };
@@ -900,11 +900,11 @@
     };
 
     dieCommand.prototype.functionality = function() {
-      API.sendChat("Noooo, don't kill me!");
+      API.sendChat("What are you doing!");
       undoHooks();
-      API.sendChat("Arrggh");
+      API.sendChat("pls stahp");
       data.implode();
-      return API.sendChat("I'm dead");
+      return API.sendChat("I thought we were friends x_x");
     };
 
     return dieCommand;
@@ -1146,7 +1146,7 @@
             }
           }
         }
-        return API.sendChat("I don't see a user in the room named '" + givenName + "'.");
+        return API.sendChat("There is no user in the room by the ID of '" + givenName + "'.");
       }
     };
 
@@ -1193,10 +1193,10 @@
           msg += "Their woot:vote ratio is " + votes['positiveRatio'].toString() + ".";
           return API.sendChat(msg);
         } else {
-          return API.sendChat("I don't recognize a user named '" + name + "'");
+          return API.sendChat("There Does not seem to be anyone by the name of" + name + "'");
         }
       } else {
-        return API.sendChat("I'm not sure what you want from me...");
+        return API.sendChat("Do you want something? Or are you just trying to annoy me");
       }
     };
 
@@ -1275,7 +1275,7 @@
         }
       }
       if (stringstaff.length === 0) {
-        stringstaff = "There are currently no staff members active :'(";
+        stringstaff = "No Staff currently active at this point, Aw Shucks.";
       }
       return stringstaff;
     };
@@ -1364,7 +1364,7 @@
     };
 
     versionCommand.prototype.functionality = function() {
-      return API.sendChat("/me is running TastycatBot version " + currentversion);
+      return API.sendChat("/me is running TastycatBotEDIT version " + currentversion);
     };
 
     return versionCommand;
@@ -1397,7 +1397,7 @@
   };
 
   announceCurate = function(obj) {
-    return APIsendChat("/em: " + obj.user.username + " loves this song!");
+    return APIsendChat("/em: " + obj.user.username + " Curated this track!");
   };
 
   handleUserJoin = function(user) {
@@ -1465,10 +1465,10 @@
       sender = API.getUser(chat.fromID);
       if (!sender.ambassador && !sender.moderator && !sender.owner && !sender.superuser) {
         if (!data.users[chat.fromID]["protected"]) {
-          API.sendChat("Don't spam room links you ass clown");
+          API.sendChat("Don't spam room links, Thats just rude!");
           return API.moderateDeleteChat(chat.chatID);
         } else {
-          return API.sendChat("I'm supposed to kick you, but you're just too darn pretty.");
+          return API.sendChat("I'm supposed to kick you, But we are all cats here right!");
         }
       }
     }
@@ -1478,7 +1478,7 @@
     var msg;
 
     msg = chat.message.toLowerCase();
-    if (msg.indexOf('fan me') !== -1 || msg.indexOf('fan for fan') !== -1 || msg.indexOf('fan pls') !== -1 || msg.indexOf('fan4fan') !== -1 || msg.indexOf('add me to fan') !== -1 || msg.indexOf('autowoot:') !== -1) {
+    if (msg.indexOf('fan me') !== -1 || msg.indexOf(':trollface:') !== -1 || msg.indexOf('fan pls') !== -1 || msg.indexOf('fan4fan') !== -1 || msg.indexOf('add me to fan') !== -1 || msg.indexOf('autowoot:') !== -1) {
       return API.moderateDeleteChat(chat.chatID);
     }
   };
