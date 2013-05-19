@@ -65,7 +65,7 @@
       {
         interval: 7,
         offset: 0,
-        msg: "All praise our lord and savior @Raptor Jeebus"
+        msg: "All praise our lord and savior @Benoitdx9"
       }, {
         interval: 5,
         offset: 0,
@@ -693,8 +693,8 @@
     themeCommand.prototype.functionality = function() {
       var msg;
 
-      msg = "Any type of Bass Music is allowed here. Including Dubstep, Complextro, Drum and Bass, Glitch-Hop, Trap, ";
-      msg += "Garage, Breakbeat, Hardstyle, Moombahton, HEAVY EDM, House, Electro, and Trance!!";
+      msg = "Any type of Music is allowed here. Including Dubstep, Complextro, Drum and Bass, Glitch-Hop, Trap, ";
+      msg += "Garage, Breakbeat, Hardstyle, Moombahton, HEAVY EDM, House, Electro, Trance and ALL other Genres!!";
       return API.sendChat(msg);
     };
 
@@ -720,11 +720,11 @@
       var msg1, msg2;
 
       msg1 = "1) Don't complain! we are all here to have fun!. ";
-      msg1 += "2) Tastycat DJ's have  priority!. ";
+      msg1 += "2) Staff have  priority!. ";
       msg1 += "3) The bot will remove you from the booth if you are AFK for 1 hour. ";
       msg1 += "4) skips will be decided by staff. ";
       msg1 += "5) Do not play mixes. ";
-      msg2 = "6) Do not use the /em or /me commands( yellow text ) ...using this twice will get you kicked from the room. ";
+      msg2 = "6) Do not use the /em or /me commands";
       msg2 += "7) Do not ask for fans. ";
       API.sendChat(msg1);
       return setTimeout((function() {
@@ -753,8 +753,8 @@
     roomHelpCommand.prototype.functionality = function() {
       var msg1, msg2;
 
-      msg1 = "Welcome to #TASTYCAT! Create a playlist and populate it with songs from either YouTube or Soundcloud.  ";
-      msg1 += "Click the 'Join Waitlist' button and wait your turn to play music. All forms of EDM are allowed.";
+      msg1 = "Welcome to Swiss Cheese and Maple Syrup! Create a playlist and populate it with songs from either YouTube or Soundcloud.  ";
+      msg1 += "Click the 'Join Waitlist' button and wait your turn to play music. All forms of Music are allowed.";
       msg2 = "Play good quality music.  ";
       msg2 += "Ask staff if you're unsure about your song choice";
       API.sendChat(msg1);
@@ -1342,7 +1342,7 @@
     };
 
     promoCommand.prototype.functionality = function() {
-      return API.sendChat("/em: " + "Promo code = tastycat " + "http://community.edmspotlight.com/forum.php ");
+      return API.sendChat("/em: " + "Promo code = Pandoric " + "http://community.edmspotlight.com/forum.php ");
     };
 
     return promoCommand;
@@ -1364,7 +1364,7 @@
     };
 
     versionCommand.prototype.functionality = function() {
-      return API.sendChat("/me is running TastycatBotEDIT version " + currentversion);
+      return API.sendChat("/me is running SuperBot version " + currentversion);
     };
 
     return versionCommand;
@@ -1468,7 +1468,7 @@
           API.sendChat("Don't spam room links, Thats just rude!");
           return API.moderateDeleteChat(chat.chatID);
         } else {
-          return API.sendChat("I'm supposed to kick you, But we are all cats here right!");
+          return API.sendChat("I'm supposed to kick you, But we are all here to party right!");
         }
       }
     }
